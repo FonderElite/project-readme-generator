@@ -11,7 +11,10 @@ class Mdpy(object):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
         ''')
         time.sleep(1.5)
-        clear =  os.system("clear") if platform.system == "Windows" else os.system("cls")
+        if platform.system == "Windows":
+            os.system("cls")
+        else:
+            os.system("clear")
         time.sleep(1)
         print(x)
 
